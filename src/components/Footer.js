@@ -9,18 +9,12 @@ function Footer({}) {
     return (
         <footer className="App-footer">
           <div className="social-links">
-            <p className="footer-text">Check us out on Github and LinkedIn!</p>
+            <p className="footer-text">Check us out on Github!</p>
             <a 
               href="https://github.com/humkeyg/Career-Cone-1.0"
               target="_blank"
             >
               <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </div>
         </footer>

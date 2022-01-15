@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #00080a;
+  background-color: #f6a975;
 }
 
 .App-header {
@@ -8,25 +8,27 @@
   font-size: 80px;;
   display: flex;
   flex-direction: column;
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }
 
 .nav {
   font-family: 'Raleway';
   font-weight: bold;
-  color: whitesmoke;
+  background-color: #f8b682;
 }
 
 .header-img {
-  background-image: url('../src/images/wcBG1.jpg');
+  background-image: url('../src/images/headerBG.jpg');
   background-size: cover;
 }
 
 .App-footer {
-  border-top: 1px solid white;
+  border-top: 1px solid black;
   font-family: 'Raleway';
   font-size: 27px;
-  color: whitesmoke;
+  background-size: cover;
+  background-image: url('../src/images/footerBG.jpg');
+  /* color: whitesmoke; */
 }
 
 .footer-text {
@@ -36,5 +38,5 @@
 .fab {
   font-family: 'Raleway';
   font-size: 25px;
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }

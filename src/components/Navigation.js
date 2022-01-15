@@ -5,12 +5,12 @@ function Navigation({ currentPage, setCurrentPage }) {
 
   return (
 
-      <Navbar bg="light" expand="lg">
-        <Container>
+      <Navbar className="nav" expand="lg">
+        <Container justify>
           <Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav variant="tabs" defaultActiveKey="#dashboard" className="me-auto">
               <Nav.Link 
               href="#dashboard"
               onClick={() => setCurrentPage('Dashboard')}
