@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bulma/css/bulma.min.css';
-import { Card, Image, Content, Media, Heading } from 'react-bulma-components';
+import { Card, Image, Content, Media, Heading, Columns } from 'react-bulma-components';
 
 import alison from "../../images/alison.JPG"
 import daniel from "../../images/daniel.png"
@@ -16,7 +16,9 @@ export default function About() {
         <h2 className="section-title">
         Meet the team:
         </h2>
-        <div >
+
+   <Columns>
+    <Columns.Column>
                 <Card is style={{ width: 300, margin: 'auto' }}>
             <Card.Image
                 size="4by3"
@@ -48,11 +50,12 @@ export default function About() {
                 
                 </Content>
             </Card.Content>
-            </Card>
-        </div>
+      </Card>
+    </Columns.Column>
 
 
-        <div >
+        
+  <Columns.Column>
             <Card style={{ width: 300, margin: 'auto' }} >
             <Card.Image
                 size="4by3"
@@ -78,11 +81,14 @@ export default function About() {
                     Fleet Engineer preparing to transfer into the tech industry.
                     <br />
                 <a href="https://github.com/Diaz-Daniel">github.com</a>
-                </Content>
-            </Card.Content>
-            </Card>
-        </div>
+              </Content>
+         </Card.Content>
+      </Card>
+     </Columns.Column>
+       
 
+
+   <Columns.Column>
     <Card style={{ width: 300, margin: 'auto' }}>
       <Card.Image
         size="4by3"
@@ -114,7 +120,9 @@ export default function About() {
         </Content>
       </Card.Content>
     </Card>
+    </Columns.Column>
 
+    <Columns.Column>
     <Card style={{ width: 300, margin: 'auto' }}>
       <Card.Image
         size="4by3"
@@ -146,7 +154,9 @@ export default function About() {
         </Content>
       </Card.Content>
     </Card>
+    </Columns.Column>
 
+    <Columns.Column>
     <Card style={{ width: 300, margin: 'auto' }}>
       <Card.Image
         size="4by3"
@@ -178,6 +188,10 @@ export default function About() {
       </Card.Content>
     </Card>
 
+  </Columns.Column>
+
+
+  <Columns.Column>
     <Card style={{ width: 300, margin: 'auto' }}>
       <Card.Image
         size="4by3"
@@ -208,8 +222,9 @@ export default function About() {
         </Content>
       </Card.Content>
     </Card>
+  </Columns.Column>
 
-
+</Columns>
 
 </div>
 
