@@ -225,9 +225,8 @@ export default function About() {
   </Columns.Column>
 
 </Columns>
+<br />
 
 </div>
-
-
   )
 }
