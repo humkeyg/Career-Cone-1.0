@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bulma/css/bulma.min.css';
 import {Box, Button, Field, Control, Textarea, Container, Notification} from 'react-bulma-components';
-import '../../../src/App';
+import '../../App';
 
 export default function Notes() {
     return (
