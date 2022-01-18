@@ -41,5 +41,9 @@
   /* color: whitesmoke; */
 }
 
-/* About Page Styling */
+/* Notes Page Styling */
+textarea {
+position: relative;
+width: 50%;
 
+}
