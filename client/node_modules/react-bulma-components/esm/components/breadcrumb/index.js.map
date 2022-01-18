@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/breadcrumb/index.js"],"names":["Breadcrumb"],"mappings":"AAAA,OAAOA,UAAP,MAAuB,cAAvB;AAEA,eAAeA,UAAf","sourcesContent":["import Breadcrumb from './breadcrumb';\n\nexport default Breadcrumb;\n"],"file":"index.js"}

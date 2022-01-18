@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/components/box/index.js"],"names":["Box"],"mappings":"AAAA,OAAOA,GAAP,MAAgB,OAAhB;AAEA,eAAeA,GAAf","sourcesContent":["import Box from './box';\n\nexport default Box;\n"],"file":"index.js"}
