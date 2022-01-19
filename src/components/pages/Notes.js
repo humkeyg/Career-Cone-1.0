@@ -14,16 +14,16 @@ export default function Notes() {
 
             <br />
             
-                <Button color="primary">
+                <Button color="primary" className="button">
                     Save!
                 </Button>
             
             <hr />
 
            
-            <Container>
+            <Container className="container">
                 <Notification color="primary">
-                saved notes will go here
+                notes go here
                 </Notification>
             </Container>
 
