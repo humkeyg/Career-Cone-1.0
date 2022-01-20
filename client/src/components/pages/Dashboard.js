@@ -3,7 +3,11 @@ import 'bulma/css/bulma.min.css';
 import Notes from '../widgets/Notes.js';
 import { Form, Button, Block, Card } from 'react-bulma-components';
 import { Container, Row, Col } from 'react-bootstrap';
+<<<<<<< HEAD
+import Notes from '../widgets/Notes';
+=======
 import '../widgets/Calendar.css'
+>>>>>>> 6e07032bfc972ff8e547dd095f5005d15e5f17eb
 
 export default function Dashboard() {
   return (

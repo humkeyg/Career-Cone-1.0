@@ -1,4 +1,5 @@
 import React from 'react';
+// import './Navigation.css';
 import { Navbar, Container, Nav} from 'react-bootstrap';
 
 function Navigation({ currentPage, setCurrentPage }) {
