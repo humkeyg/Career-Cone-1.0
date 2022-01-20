@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bulma/css/bulma.min.css';
+import {  Row } from 'react-bootstrap';
 import { Card, Image, Content, Media, Heading, Columns } from 'react-bulma-components';
 
 import alison from "../../images/alison.JPG"
@@ -17,7 +18,7 @@ export default function About() {
         Meet the team:
         </h2>
 
-   <Columns>
+   <Row>
     <Columns.Column>
                 <Card is style={{ width: 300, margin: 'auto' }}>
             <Card.Image
@@ -122,6 +123,8 @@ export default function About() {
     </Card>
     </Columns.Column>
 
+  </Row>
+  <Row>
     <Columns.Column>
     <Card style={{ width: 300, margin: 'auto' }}>
       <Card.Image
@@ -224,7 +227,7 @@ export default function About() {
     </Card>
   </Columns.Column>
 
-</Columns>
+</Row>
 <br />
 
 </div>
