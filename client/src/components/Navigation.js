@@ -28,35 +28,11 @@ function Navigation({ currentPage, setCurrentPage }) {
               </Nav.Link>
 
               <Nav.Link 
-              href="#calendar"
-              onClick={() => setCurrentPage('Calendar')}
-              className={currentPage === 'Calendar' ? 'nav-link active' : 'nav-link'}
-              >
-              Calendar
-              </Nav.Link>
-
-              <Nav.Link 
-              href="#progress"
-              onClick={() => setCurrentPage('Progress')}
-              className={currentPage === 'Progress' ? 'nav-link active' : 'nav-link'}
-              >
-              Progress
-              </Nav.Link>
-
-              <Nav.Link 
               href="#saved"
               onClick={() => setCurrentPage('Saved')}
               className={currentPage === 'Saved' ? 'nav-link active' : 'nav-link'}
               >
               Saved
-              </Nav.Link>
-
-              <Nav.Link 
-              href="#notes"
-              onClick={() => setCurrentPage('Notes')}
-              className={currentPage === 'Notes' ? 'nav-link active' : 'nav-link'}
-              >
-              Notes
               </Nav.Link>
 
               <Nav.Link 
