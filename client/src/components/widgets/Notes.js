@@ -19,7 +19,6 @@ export default function Notes() {
                 </Button>
             
             <hr />
-
            
             <Container>
                 <Notification color="primary">

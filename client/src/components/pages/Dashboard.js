@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import 'bulma/css/bulma.min.css';
-import Notes from '../widgets/Notes.js';
 import { Container, Row, Col } from 'react-bootstrap';
 import Notes from '../widgets/Notes';
+import '../widgets/Calendar.css'
 
 export default function Dashboard() {
   return (
