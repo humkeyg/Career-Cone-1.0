@@ -15,8 +15,8 @@ import Saved from "./components/pages/Saved";
 import About from "./components/pages/About";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navigation";
-// import Signup from "./components/pages/Signup";
-// import Login from "./components/pages/Login";
+import Signup from "./components/pages/Signup";
+import Login from "./components/pages/Login";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -54,8 +54,9 @@ function App() {
 
           <Route exact path="/About" element={<About />} />
 
-          {/* <Route exact path="/signup" component={Signup} /> */}
-          {/* <Route exact path="/login" component={Login} /> */}
+          <Route exact path="/Login" element={<Login />} />
+
+          <Route exact path="/Signup" element={<Signup />} />
         </Routes>
         <Footer />
       </Router>
