@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bulma/css/bulma.min.css';
 import { Form, Button, Block, Card } from 'react-bulma-components';
 import { Container, Row, Col } from 'react-bootstrap';
-import Calendar from '../widgets/Calendar';
+import '../widgets/Calendar.css'
 import Notes from '../widgets/Notes';
 
 export default function Dashboard() {
@@ -12,7 +12,7 @@ export default function Dashboard() {
       <Row>
         
         <Col>
-          <Calendar/>
+        <iframe className='calendarstyle' src="https://calendar.google.com/calendar/embed?src=i3cdofnqk0s122tmc9mbgnhj3c%40group.calendar.google.com&ctz=America%2FLos_Angeles"></iframe>
         </Col>
 
         <Col>
