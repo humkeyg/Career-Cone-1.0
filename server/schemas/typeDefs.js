@@ -3,15 +3,25 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type Profile {
     _id: ID
-    name: String
+    firstName: String
+    lastName: String
     email: String
     password: String
-    skills: [String]!
+    savedJobs: [Job]
+  }
+
+  type Job {
+    _id: ID!
+
   }
 
   type Auth {
     token: ID!
     profile: Profile
+  }
+
+  input savedJob {
+    
   }
 
   type Query {
@@ -22,12 +32,12 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addProfile(name: String!, email: String!, password: String!): Auth
+    addProfile(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
-    addSkill(profileId: ID!, skill: String!): Profile
+    saveJob(input: savedJob!): Profile
     removeProfile: Profile
-    removeSkill(skill: String!): Profile
+    removeJob(jobId: ID!): Profile
   }
 `;
 

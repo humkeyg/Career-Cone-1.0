@@ -21,8 +21,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, password }) => {
-      const profile = await Profile.create({ name, email, password });
+    addProfile: async (parent, { firstName, lastName, email, password }) => {
+      const profile = await Profile.create({ firstName, lastName, email, password });
       const token = signToken(profile);
 
       return { token, profile };
@@ -45,17 +45,16 @@ const resolvers = {
     },
 
     // Add a third argument to the resolver to access data in our `context`
-    addSkill: async (parent, { profileId, skill }, context) => {
+    saveJob: async (parent, args, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
         return Profile.findOneAndUpdate(
-          { _id: profileId },
+          { _id: context.user._id },
           {
-            $addToSet: { skills: skill },
+            $addToSet: { savedJobs: args.input },
           },
           {
             new: true,
-            runValidators: true,
           }
         );
       }
@@ -70,11 +69,11 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     // Make it so a logged in user can only remove a skill from their own profile
-    removeSkill: async (parent, { skill }, context) => {
+    removeJob: async (parent, args, context) => {
       if (context.user) {
         return Profile.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { skills: skill } },
+          { $pull: { savedJobs: { jobId: args.jobId} } },
           { new: true }
         );
       }
