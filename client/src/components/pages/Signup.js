@@ -7,7 +7,7 @@ import 'bulma/css/bulma.min.css';
 
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: 'true', password: 'true' });
+  const [formState, setFormState] = useState({ firstName: '', lastName: '', email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
