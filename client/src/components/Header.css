@@ -1,3 +1,4 @@
-header {
-  padding-top: 30px;
+.App-header {
+  padding: 2.5%;
+  text-align: center;
 }
