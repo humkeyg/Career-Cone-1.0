@@ -1,3 +1,5 @@
+//ALL OFF THIS IS FROM BOOK SEARCH HOMEWORK
+
 
 // export const getMe = (token) => {
 //   return fetch('/api/users/me', {
