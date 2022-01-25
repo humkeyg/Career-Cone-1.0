@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Footer.css';
+import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub} from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
@@ -11,6 +11,7 @@ function Footer({}) {
           <div className="social-links">
             <p className="footer-text">Check us out on Github!</p>
             <a 
+              className="icon"
               href="https://github.com/humkeyg/Career-Cone-1.0"
               target="_blank"
             >
