@@ -1,33 +1,37 @@
-import React from 'react';
-import 'bulma/css/bulma.min.css';
-import {Box, Button, Field, Control, Textarea, Container, Notification} from 'react-bulma-components';
-import '../../App';
+import React from "react";
+
+import {
+  Box,
+  Button,
+  Field,
+  Control,
+  Textarea,
+  Container,
+  Notification,
+} from "react-bulma-components";
+import "../../App";
 
 export default function Notes() {
-    return (
-       <div className="Notes">
-            <h2 className="section-title">
-                Notes:
-            </h2>
+  return (
+    <div className="Notes">
+      <h2 className="section-title">Notes:</h2>
 
-            <textarea class="textarea is-primary" placeholder="Save your notes here!"></textarea>
+      <textarea
+        class="textarea is-primary"
+        placeholder="Save your notes here!"
+      ></textarea>
 
-            <br />
-            
-                <Button color="primary">
-                    Save!
-                </Button>
-            
-            <hr />
+      <br />
 
-           
-            <Container>
-                <Notification color="primary">
-                saved notes will go here
-                </Notification>
-            </Container>
+      <Button color="primary">Save!</Button>
 
-            <br />
-        </div> 
-    )
+      <hr />
+
+      <Container>
+        <Notification color="primary">saved notes will go here</Notification>
+      </Container>
+
+      <br />
+    </div>
+  );
 }

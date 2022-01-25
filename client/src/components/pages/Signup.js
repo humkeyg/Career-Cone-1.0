@@ -1,27 +1,38 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import Auth from '../../utils/auth';
-import { ADD_USER } from '../../utils/mutations';
-import 'bulma/css/bulma.min.css';
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import Auth from "../../utils/auth";
+import { ADD_PROFILE } from "../../utils/mutations";
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: 'true', password: 'true' });
-  const [addUser] = useMutation(ADD_USER);
+  const [formState, setFormState] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  const [addProfile] = useMutation(ADD_PROFILE);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const mutationResponse = await addUser({
-      variables: {
-        email: formState.email,
-        password: formState.password,
-        firstName: formState.firstName,
-        lastName: formState.lastName,
-      },
+
+    try {
+      const { data } = await addProfile({
+        variables: { ...formState },
+      });
+      console.log(data);
+
+      Auth.login(data.addProfile.token);
+    } catch (err) {
+      console.log(err);
+    }
+
+    setFormState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
     });
-    const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
   };
 
   const handleChange = (event) => {
@@ -33,7 +44,6 @@ function Signup(props) {
   };
 
   return (
-    
     <div className="container my-1">
       <Link to="/login">← Go to Login</Link>
 
@@ -84,7 +94,6 @@ function Signup(props) {
         </div>
       </form>
     </div>
-
   );
 }
 
