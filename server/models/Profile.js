@@ -2,7 +2,13 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const profileSchema = new Schema({
-  name: {
+  firstName: {
+    type: String,
+    required: true,
+    unique: true,
+    trim: true,
+  },
+  lastName: {
     type: String,
     required: true,
     unique: true,
@@ -19,13 +25,14 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  skills: [
-    {
-      type: String,
-      trim: true,
-    },
-  ],
-});
+  savedJobs: [jobsSchema]
+},
+{
+  toJSON: {
+    virtuals: true,
+  },
+}
+);
 
 // set up pre-save middleware to create password
 profileSchema.pre('save', async function (next) {
