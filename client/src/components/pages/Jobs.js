@@ -2,6 +2,7 @@ import React from "react";
 
 import { Form, Button } from "react-bulma-components";
 import { Container } from "react-bootstrap";
+import "./Jobs.css";
 
 export default function Jobs() {
   return (
@@ -20,7 +21,7 @@ export default function Jobs() {
       </Form.Field>
       <Form.Field>
         <Form.Control>
-          <Button color="link">Search</Button>
+          <Button color="primary">Search</Button>
         </Form.Control>
       </Form.Field>
       <Form.Field>
@@ -30,7 +31,7 @@ export default function Jobs() {
       </Form.Field>
       <Form.Field>
         <Form.Control>
-          <Button color="link">Search</Button>
+          <Button className="srchBtn" color="primary">Search</Button>
         </Form.Control>
       </Form.Field>
     </Container>
