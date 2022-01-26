@@ -24,7 +24,7 @@ function Signup(props) {
 
       Auth.login(data.addProfile.token);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
 
     setFormState({

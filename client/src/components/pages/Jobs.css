@@ -1,3 +1,8 @@
 .srchBtn {
     margin-bottom: 4%;
 }
+
+.save {
+    position: relative;
+    left:1100px;
+}
