@@ -1,12 +1,13 @@
 import React from "react";
 
 import { Form, Button } from "react-bulma-components";
-import { Container } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import "./Jobs.css";
 
 export default function Jobs() {
   return (
     <Container>
+      <Col>
       {" "}
       <header className="header">Search</header>
       <Form.Field>
@@ -34,6 +35,13 @@ export default function Jobs() {
           <Button className="srchBtn" color="primary">Search</Button>
         </Form.Control>
       </Form.Field>
+      </Col>
+
+      <Col>
+        <div className="results"></div>
+      </Col>
+
+
     </Container>
   );
 }
