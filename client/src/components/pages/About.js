@@ -1,4 +1,5 @@
 import React from "react";
+import {Row, Col} from "react-bootstrap";
 
 import {
   Card,
@@ -8,6 +9,8 @@ import {
   Heading,
   Columns,
 } from "react-bulma-components";
+
+import './About.css';
 
 import alison from "../../images/alison.JPG";
 import daniel from "../../images/daniel.png";
@@ -21,8 +24,8 @@ export default function About() {
     <div ClassName="aboutMe">
       <h2 className="section-title">Meet the team:</h2>
 
-      <Columns>
-        <Columns.Column>
+      <Row>
+        <Col>
           <Card is style={{ width: 300, margin: "auto" }}>
             <Card.Image size="4by3" src={icecream} />
             <Card.Content>
@@ -46,9 +49,9 @@ export default function About() {
               </Content>
             </Card.Content>
           </Card>
-        </Columns.Column>
+        </Col>
 
-        <Columns.Column>
+        <Col>
           <Card style={{ width: 300, margin: "auto" }}>
             <Card.Image size="4by3" src={icecream} />
             <Card.Content>
@@ -70,9 +73,9 @@ export default function About() {
               </Content>
             </Card.Content>
           </Card>
-        </Columns.Column>
+        </Col>
 
-        <Columns.Column>
+        <Col>
           <Card style={{ width: 300, margin: "auto" }}>
             <Card.Image size="4by3" src={icecream} />
             <Card.Content>
@@ -96,9 +99,11 @@ export default function About() {
               </Content>
             </Card.Content>
           </Card>
-        </Columns.Column>
+        </Col>
+      </Row>
 
-        <Columns.Column>
+      <Row>
+        <Col>
           <Card style={{ width: 300, margin: "auto" }}>
             <Card.Image size="4by3" src={icecream} />
             <Card.Content>
@@ -122,9 +127,9 @@ export default function About() {
               </Content>
             </Card.Content>
           </Card>
-        </Columns.Column>
+        </Col>
 
-        <Columns.Column>
+        <Col>
           <Card style={{ width: 300, margin: "auto" }}>
             <Card.Image size="4by3" src={icecream} />
             <Card.Content>
@@ -146,9 +151,9 @@ export default function About() {
               </Content>
             </Card.Content>
           </Card>
-        </Columns.Column>
+        </Col>
 
-        <Columns.Column>
+        <Col>
           <Card style={{ width: 300, margin: "auto" }}>
             <Card.Image size="4by3" src={icecream} />
             <Card.Content>
@@ -170,8 +175,8 @@ export default function About() {
               </Content>
             </Card.Content>
           </Card>
-        </Columns.Column>
-      </Columns>
+        </Col>
+      </Row>
       <br />
     </div>
   );
