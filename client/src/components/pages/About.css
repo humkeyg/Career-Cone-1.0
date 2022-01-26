@@ -1,3 +1,10 @@
 .aboutMe {
   background-color: #f8b682;
 }
+
+.section-title {
+  font-size: 50px;
+  font-family: 'Raleway', 'sans-serif';
+  text-align: center;
+  padding: 2.5%;
+}

@@ -45,7 +45,7 @@ export default function About() {
                 committed work ethic seeking employment to kick start career in
                 website development and content curation.
                 <br />
-                <a href="https://github.com/afunkhouser">github.com</a>
+                <a href="https://github.com/afunkhouser">github.com/afunkhouser</a>
               </Content>
             </Card.Content>
           </Card>
@@ -69,7 +69,7 @@ export default function About() {
               <Content>
                 Fleet Engineer preparing to transfer into the tech industry.
                 <br />
-                <a href="https://github.com/Diaz-Daniel">github.com</a>
+                <a href="https://github.com/Diaz-Daniel">github.com/Diaz-Daniel</a>
               </Content>
             </Card.Content>
           </Card>
@@ -95,7 +95,7 @@ export default function About() {
                 explorer the world of web development. I enjoy cooking, video
                 games, and the outdoors.
                 <br />
-                <a href="https://github.com/kcshire211">github.com</a>
+                <a href="https://github.com/kcshire211">github.com/kcshire211</a>
               </Content>
             </Card.Content>
           </Card>
@@ -112,9 +112,9 @@ export default function About() {
                   <Image size={64} alt="64x64" src={gabby} />
                 </Media.Item>
                 <Media.Item>
-                  <Heading size={4}>Gabby Humkey</Heading>
+                  <Heading size={4}>Gaby Humkey</Heading>
                   <Heading subtitle size={6}>
-                    @gabbyhumkey
+                    @gabyhumkey
                   </Heading>
                 </Media.Item>
               </Media>
@@ -123,7 +123,7 @@ export default function About() {
                 Currently attending UW Coding Bootcamp for Full-Stack Web
                 Development.
                 <br />
-                <a href="https://github.com/kcshire211">github.com</a>
+                <a href="https://github.com/humkeyg">github.com/humkeyg</a>
               </Content>
             </Card.Content>
           </Card>
@@ -147,7 +147,7 @@ export default function About() {
               <Content>
                 I am Ryan
                 <br />
-                <a href="https://github.com/degrootr253">github.com</a>
+                <a href="https://github.com/degrootr253">github.com/degrootr253</a>
               </Content>
             </Card.Content>
           </Card>
@@ -171,7 +171,7 @@ export default function About() {
               <Content>
                 I am Lateah
                 <br />
-                <a href="https://github.com/lateahmh">github.com</a>
+                <a href="https://github.com/lateahmh">github.com/lateahmh</a>
               </Content>
             </Card.Content>
           </Card>
