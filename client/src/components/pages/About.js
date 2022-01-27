@@ -21,7 +21,7 @@ import icecream from "../../images/SummerIceCream_04.jpg";
 
 export default function About() {
   return (
-    <div ClassName="aboutMe">
+    <div className="aboutMe">
       <h2 className="section-title">Meet the team:</h2>
 
       <Row>
