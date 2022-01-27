@@ -1,13 +1,16 @@
 import React from "react";
-import "./Navigation.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Auth from '../utils/auth'
+import Auth from '../utils/auth';
 
 function Navigation() {
   return (
-    <Navbar className="nav" expand="lg">
-      <Container justify>
+    <Navbar className="nav" expand="lg"
+      style={{
+        backgroundColor: '#f8b682',
+        fontWeight: 'bold',
+      }}>
+      {/* <Container justify> */}
         <Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -46,7 +49,7 @@ function Navigation() {
             </Nav>
           </Navbar.Collapse>
         </Navbar.Brand>
-      </Container>
+      {/* </Container> */}
     </Navbar>
   );
 }

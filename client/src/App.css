@@ -8,13 +8,10 @@
   font-size: 80px;;
   display: flex;
   flex-direction: column;
-  /* color: whitesmoke; */
 }
 
 .nav {
   font-family: 'Raleway';
-  font-weight: bold;
-  background-color: #f8b682;
 }
 
 .header-img {
@@ -28,7 +25,6 @@
   font-size: 27px;
   background-size: cover;
   background-image: url('../src/images/footerBG.jpg');
-  /* color: whitesmoke; */
 }
 
 .footer-text {
@@ -38,12 +34,10 @@
 .fab {
   font-family: 'Raleway';
   font-size: 25px;
-  /* color: whitesmoke; */
 }
 
 /* Notes Page Styling */
 textarea {
 position: relative;
 width: 50%;
-
 }
