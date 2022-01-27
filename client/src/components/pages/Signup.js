@@ -14,6 +14,7 @@ function Signup(props) {
   const [addProfile] = useMutation(ADD_PROFILE);
 
   const handleFormSubmit = async (event) => {
+    // console.log("we are inside handleformsubmit");
     event.preventDefault();
 
     try {

@@ -22,7 +22,7 @@ import Login from "./components/pages/Login";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "graphql",
+  uri: "/graphql",
   options: {
     reconnect: true
   }
