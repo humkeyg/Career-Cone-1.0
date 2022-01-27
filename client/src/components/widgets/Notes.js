@@ -19,11 +19,11 @@ export default function Notes() {
     let noteList;
 
     if (window.location.pathname === 'notes.html') {
-      noteTitle = document.querySelector('.note-title');
-      noteText = document.querySelector('.note-textarea');
-      saveNoteBtn = document.querySelector('.save-note');
-      newNoteBtn = document.querySelector('.new-note');
-      noteList = document.querySelectorAll('.list-container .list-group');
+      noteTitle = '.note-title';
+      noteText = '.note-textarea';
+      saveNoteBtn = '.save-note';
+      newNoteBtn = '.new-note';
+      noteList = '.list-container';
     }
 
     // Show an element
@@ -202,7 +202,9 @@ export default function Notes() {
 
       <textarea
         placeholder="Save your notes here!"
-      ></textarea>
+      >
+
+      </textarea>
 
       <br />
 
@@ -213,7 +215,7 @@ export default function Notes() {
       <Container>
         {/* <Notification color="primary">saved notes will go here</Notification> */}
         <div>
-          <ul className="list-container list-group">
+          <ul className="list-container">
             <h3 className = "note-title"></h3>
               <div className = "note-textarea">
                 <button className="new-note"></button>
