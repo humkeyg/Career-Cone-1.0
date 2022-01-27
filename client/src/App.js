@@ -22,10 +22,10 @@ import Login from "./components/pages/Login";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "http://localhost3000/graphql",
+  uri: "/graphql",
   options: {
-    reconnect: true
-  }
+    reconnect: true,
+  },
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
