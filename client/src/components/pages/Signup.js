@@ -14,6 +14,7 @@ function Signup(props) {
   const [addProfile] = useMutation(ADD_PROFILE);
 
   const handleFormSubmit = async (event) => {
+    console.log("whatever");
     event.preventDefault();
 
     try {
@@ -24,7 +25,7 @@ function Signup(props) {
 
       Auth.login(data.addProfile.token);
     } catch (err) {
-      //console.log(err);
+      console.log(err);
     }
 
     setFormState({
