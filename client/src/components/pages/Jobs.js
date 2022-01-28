@@ -8,6 +8,7 @@ export default function Jobs() {
     jobs: "",
     zipCode: ""
   });
+  //line 11 below allows for job results to render
   const [jobs, setJobs] = useState([])
   function searchJobs(jobs, zipCode) {
     var jobLocation = "&LocationName=" + zipCode;
@@ -34,6 +35,7 @@ export default function Jobs() {
         return res.json();
       }).then(data => {
         console.log(data)
+        // line below takes the job search results and allows us to display the search items we want
         setJobs(data.SearchResult.SearchResultItems)
         // Map Over each response and append to section of the JSX
       })
@@ -139,9 +141,12 @@ export default function Jobs() {
               <div className="card-content">
                   {
                     jobs.map(({MatchedObjectDescriptor:job}) => (
-                      <div>
-                        <p>{job.PositionTitle}</p>
-                        <p>{job.DepartmentName}</p>
+                      <div><ul>
+                        <li>{job.PositionTitle}</li>
+                        <li>{job.DepartmentName}</li>
+                        <li>{job.PositionURI}</li><br></br>
+                        <button className="is-info">Save</button><hr></hr>
+                        </ul>  
                       </div>
                     ))
                   }
