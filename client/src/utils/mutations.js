@@ -33,7 +33,7 @@ export const ADD_PROFILE = gql`
 `;
 
 export const SAVE_JOB = gql`
-  mutation saveJob($input: savedJob!) {
+  mutation saveJob($input: saveJob!) {
     saveJob: (input: $input) {
       _id
       firstName

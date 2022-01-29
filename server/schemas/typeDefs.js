@@ -12,6 +12,9 @@ const typeDefs = gql`
 
   type Job {
     _id: ID!
+    applyURI: String
+    department: String
+    position: String
   }
 
   type Auth {
@@ -27,7 +30,7 @@ const typeDefs = gql`
 
   input saveJob {
     applyURI: String
-    department:String
+    department: String
     position: String
   }
 
@@ -39,7 +42,7 @@ const typeDefs = gql`
       password: String!
     ): Auth
     login(email: String!, password: String!): Auth
-    saveJob(input: savedJob!): Profile
+    saveJob(input: saveJob!): Profile
   }
 `;
 

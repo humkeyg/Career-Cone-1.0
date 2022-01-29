@@ -26,7 +26,12 @@ const profileSchema = new Schema(
       required: true,
       minlength: 5,
     },
-    savedJobs: [jobsSchema]
+    savedJobs: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Job",
+      },
+    ],
   },
   {
     toJSON: {
