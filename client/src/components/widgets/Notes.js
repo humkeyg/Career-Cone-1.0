@@ -12,6 +12,7 @@ import {
 import "../../App";
 
 export default function Notes() {
+<<<<<<< HEAD
     let noteTitle;
     let noteText;
     let saveNoteBtn;
@@ -196,11 +197,18 @@ export default function Notes() {
 
     getAndRenderNotes();
 
+=======
+  const notes= []
+>>>>>>> c4d280fc75e4ab6dd9f840f375a839796d474ecc
   return (
     <div className="Notes">
       <h2 className="section-title">Notes:</h2>
 
       <textarea
+<<<<<<< HEAD
+=======
+        className="textarea is-primary"
+>>>>>>> c4d280fc75e4ab6dd9f840f375a839796d474ecc
         placeholder="Save your notes here!"
       >
 
