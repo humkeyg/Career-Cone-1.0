@@ -45,6 +45,10 @@ export default function Jobs() {
     
   }
 
+  function displaySearches() {
+    
+  }
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
     searchJobs(formState.jobs, formState.zipCode);
@@ -139,6 +143,7 @@ export default function Jobs() {
           <h1 id="result-header" id="underline" className="title"><u>RESULTS</u></h1>
           <div className="card">
               <div className="card-content">
+<<<<<<< HEAD
                   {
                     jobs.map(({MatchedObjectDescriptor:job}) => (
                       <div><ul>
@@ -153,6 +158,11 @@ export default function Jobs() {
                   {/* <p className="title">
                       DISPLAYED RESULTS WILL GO HERE
                   </p> */}
+=======
+                  <p className="title">
+                      DISPLAYED RESULTS WILL GO HERE
+                  </p>
+>>>>>>> 5f3e4ca3e63ea5ef2772293473cd2c9b69e35eff
               </div>
               <footer className="card-footer">
                   <p className="card-footer-item">
