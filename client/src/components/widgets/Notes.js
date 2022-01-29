@@ -12,6 +12,7 @@ import {
 import "../../App";
 
 export default function Notes() {
+  const notes= []
   return (
     <div className="Notes">
       <h2 className="section-title">Notes:</h2>
