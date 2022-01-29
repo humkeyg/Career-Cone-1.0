@@ -12,47 +12,47 @@ export default function Jobs() {
   });
   //line 11 below allows for job results to render
   const [jobs, setJobs] = useState([]);
-  // function searchJobs(jobs, zipCode) {
-  //   var jobLocation = "&LocationName=" + zipCode;
-  //   var jobCategory = "PositionTitle=" + jobs;
-  //   var host = "data.usajobs.gov";
-  //   var userAgent = "daniel.diaz.0515@gmail.com";
-  //   var authKey = "TM6TEbYm8310tpJD+9CyVa7cpguDIpbSZKZwSgnukTU=";
-  //   var url =
-  //     "https://data.usajobs.gov/api/search?" +
-  //     jobCategory +
-  //     jobLocation +
-  //     "&ResultsPerPage=5";
+  function searchJobs(jobs, zipCode) {
+    var jobLocation = "&LocationName=" + zipCode;
+    var jobCategory = "PositionTitle=" + jobs;
+    var host = "data.usajobs.gov";
+    var userAgent = "daniel.diaz.0515@gmail.com";
+    var authKey = "TM6TEbYm8310tpJD+9CyVa7cpguDIpbSZKZwSgnukTU=";
+    var url =
+      "https://data.usajobs.gov/api/search?" +
+      jobCategory +
+      jobLocation +
+      "&ResultsPerPage=5";
 
-  //   fetch(url, {
-  //     method: "GET",
+    fetch(url, {
+      method: "GET",
 
-  //     headers: {
-  //       Host: host,
-  //       "User-Agent": userAgent,
-  //       "Authorization-Key": authKey,
-  //     },
-  //   })
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //       // line below takes the job search results and allows us to display the search items we want
-  //       setJobs(data.SearchResult.SearchResultItems);
-  //       // Map Over each response and append to section of the JSX
-  //     });
-  // // }
-  // console.log(jobs);
-  // function displaySearches() {}
+      headers: {
+        Host: host,
+        "User-Agent": userAgent,
+        "Authorization-Key": authKey,
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        // line below takes the job search results and allows us to display the search items we want
+        setJobs(data.SearchResult.SearchResultItems);
+        // Map Over each response and append to section of the JSX
+      });
+  }
+  console.log(jobs);
+  function displaySearches() {}
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // searchJobs(formState.jobs, formState.zipCode);
-    // setFormState({
-    //   jobs: "",
-    //   zipCode: "",
-    // });
+    searchJobs(formState.jobs, formState.zipCode);
+    setFormState({
+      jobs: "",
+      zipCode: "",
+    });
   };
 
   const handleChange = (event) => {
@@ -63,20 +63,27 @@ export default function Jobs() {
     });
   };
 
-  // const saveJob = (arg) => {
-  //   console.log(arg);
-  //  const jobToSave = arg.find(job) => {
+  const saveJob = async (arg) => {
+    console.log(arg);
+    //search the job state for the job that matches the arg that is passed in.
+    const jobToSave = jobs.find(
+      (selectedJob) => selectedJob.MatchedObjectId === arg
+    );
 
-  //  }
-  //  const token = Auth.loggedIn() ? Auth.getToken() : null;
+    // const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-  //   if (!token) {
-  //     return false;
-  //   }
+    // if (!token) {
+    //   return false;
+    // }
 
-  //   try {
-  //     const { data } = await saveJob({ variables: { input: jobToSave } })
-  // };
+    try {
+      const { data } = await saveJob({
+        variables: { input: { ...jobToSave } },
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <Container>
@@ -168,7 +175,7 @@ export default function Jobs() {
             </h1>
             <div className="card">
               <div className="card-content">
-                {/* {jobs.map(({ MatchedObjectDescriptor: job }) => (
+                {jobs.map(({ MatchedObjectDescriptor: job }) => (
                   <div>
                     <ul>
                       <li>{job.PositionTitle}</li>
@@ -178,7 +185,7 @@ export default function Jobs() {
                       <button
                         className="is-info"
                         onClick={() => {
-                          // saveJob(job);
+                          saveJob(job.MatchedObjectId);
                         }}
                       >
                         Save
@@ -186,7 +193,7 @@ export default function Jobs() {
                       <hr></hr>
                     </ul>
                   </div>
-                ))} */}
+                ))}
                 {/* <p className="title">
                       DISPLAYED RESULTS WILL GO HERE
                   </p> */}

@@ -34,7 +34,7 @@ export const ADD_PROFILE = gql`
 
 export const SAVE_JOB = gql`
   mutation saveJob($input: saveJob!) {
-    saveJob: (input: $input) {
+    saveJob(input: $input) {
       _id
       firstName
       lastName
@@ -46,5 +46,5 @@ export const SAVE_JOB = gql`
         position
       }
     }
-  } 
+  }
 `;

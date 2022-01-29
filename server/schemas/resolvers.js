@@ -45,13 +45,13 @@ const resolvers = {
     },
 
     // Add a third argument to the resolver to access data in our `context`
-    saveJob: async (parent, args, context) => {
+    saveJob: async (parent, { input }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
         return Profile.findOneAndUpdate(
           { _id: context.user._id },
           {
-            $addToSet: { savedJobs: args.input },
+            $addToSet: { savedJobs: input },
           },
           {
             new: true,
@@ -60,7 +60,7 @@ const resolvers = {
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError("You need to be logged in!");
-    }
+    },
     // // Set up mutation so a logged in user can only remove their profile and no one else's
     // removeProfile: async (parent, args, context) => {
     //   if (context.user) {
