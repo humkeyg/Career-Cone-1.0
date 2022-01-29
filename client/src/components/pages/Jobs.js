@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Form, Button, Box, Block, Notification} from "react-bulma-components";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Jobs.css";
+import { SAVE_JOB } from '../../utils/mutations';
+import { useMutation } from "@apollo/client";
 
 export default function Jobs() {
   const [formState, setFormState] = useState({
@@ -61,6 +63,21 @@ export default function Jobs() {
       [name]: value,
     });
   };
+
+  const saveJob = (arg) => {
+   console.log(arg)
+   const jobToSave = arg.find(job) => {
+
+   }
+   const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      return false;
+    }
+
+    try {
+      const { data } = await saveJob({ variables: { input: jobToSave } })
+  }
 
   return (
     <Container>
@@ -145,7 +162,7 @@ export default function Jobs() {
                         <li>{job.PositionTitle}</li>
                         <li>{job.DepartmentName}</li>
                         <li>{job.PositionURI}</li><br></br>
-                        <button className="is-info">Save</button><hr></hr>
+                        <button className="is-info" onClick={() => {saveJob(job)}}>Save</button><hr></hr>
                         </ul>  
                       </div>
                     ))

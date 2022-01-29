@@ -26,7 +26,7 @@ const profileSchema = new Schema(
       required: true,
       minlength: 5,
     },
-    // savedJobs: [jobsSchema]
+    savedJobs: [jobsSchema]
   },
   {
     toJSON: {

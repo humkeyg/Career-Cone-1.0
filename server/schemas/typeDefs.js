@@ -25,6 +25,12 @@ const typeDefs = gql`
     me: Profile
   }
 
+  input saveJob {
+    applyURI: String
+    department:String
+    position: String
+  }
+
   type Mutation {
     addProfile(
       firstName: String!
@@ -33,11 +39,11 @@ const typeDefs = gql`
       password: String!
     ): Auth
     login(email: String!, password: String!): Auth
+    saveJob(input: savedJob!): Profile
   }
 `;
 
 module.exports = typeDefs;
 
-// saveJob(input: savedJob!): Profile
 // removeProfile: Profile
 // removeJob(jobId: ID!): Profile

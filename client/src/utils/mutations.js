@@ -31,3 +31,20 @@ export const ADD_PROFILE = gql`
     }
   }
 `;
+
+export const SAVE_JOB = gql`
+  mutation saveJob($input: savedJob!) {
+    saveJob: (input: $input) {
+      _id
+      firstName
+      lastName
+      email
+      savedJobs {
+        _id
+        applyURI
+        department
+        position
+      }
+    }
+  } 
+`;

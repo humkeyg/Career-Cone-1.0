@@ -15,10 +15,6 @@ const jobSchema = new Schema({
     position: {
         type: String
 
-    },
-    description: {
-        type: String
-
     }
 });
 
