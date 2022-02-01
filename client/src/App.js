@@ -13,7 +13,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Dashboard from "./components/pages/Dashboard";
 import Jobs from "./components/pages/Jobs";
-import Saved from "./components/pages/Saved 2";
+import Saved from "./components/pages/Saved";
 import About from "./components/pages/About";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navigation";
@@ -22,10 +22,10 @@ import Login from "./components/pages/Login";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "http://localhost3000/graphql",
+  uri: "/graphql",
   options: {
-    reconnect: true
-  }
+    reconnect: true,
+  },
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header

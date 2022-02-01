@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Box, Block, Notification} from "react-bulma-components";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./Jobs.css";
 
 export default function Jobs() {
@@ -8,6 +8,8 @@ export default function Jobs() {
     jobs: "",
     zipCode: ""
   });
+  //line 11 below allows for job results to render
+  const [jobs, setJobs] = useState([])
   function searchJobs(jobs, zipCode) {
     var jobLocation = "&LocationName=" + zipCode;
     var jobCategory = "PositionTitle=" + jobs;
@@ -33,8 +35,14 @@ export default function Jobs() {
         return res.json();
       }).then(data => {
         console.log(data)
+        // line below takes the job search results and allows us to display the search items we want
+        setJobs(data.SearchResult.SearchResultItems)
         // Map Over each response and append to section of the JSX
       })
+  }
+  console.log(jobs)
+  function displaySearches() {
+    
   }
 
   const handleFormSubmit = (event) => {
@@ -56,72 +64,110 @@ export default function Jobs() {
 
   return (
     <Container>
-      {" "}
-      <header className="header">Search</header>
-      <form onSubmit={handleFormSubmit}>
-      <Form.Field>
-        <Form.Control>
-          <Form.Input name='jobs' placeholder="Position title" onChange={handleChange}/>
-        </Form.Control>
-      </Form.Field>
-      <Form.Field>
-        <Form.Control>
-          <Form.Input name='zipCode' placeholder="Zip Code" onChange={handleChange}/>
-        </Form.Control>
-      </Form.Field>
-      <Form.Field>
-        <Form.Control>
-          <Button id="searchBtn" color="primary" type="submit">Search</Button>
-        </Form.Control>
-      </Form.Field>
-      <Form.Field>
-        <Form.Control>
-          <Form.Input placeholder="Company Name" />
-        </Form.Control>
-      </Form.Field>
-      <Form.Field>
-        <Form.Control>
-          <Button className="srchBtn" color="primary">Search</Button>
-        </Form.Control>
-      </Form.Field>
-    </form>
+      <Row>
+        <Col>
+          {" "}
+          <header className="header">Search</header>
+          <form onSubmit={handleFormSubmit}>
+          <Form.Field>
+            <Form.Control>
+              <Form.Input name='jobs' placeholder="Position title" onChange={handleChange}/>
+            </Form.Control>
+          </Form.Field>
+          <Form.Field>
+            <Form.Control>
+              <Form.Input name='zipCode' placeholder="Zip Code" onChange={handleChange}/>
+            </Form.Control>
+          </Form.Field>
+          <Form.Field>
+            <Form.Control>
+              <Button id="searchBtn" color="primary" type="submit">Search</Button>
+            </Form.Control>
+          </Form.Field>
+          <Form.Field>
+            <Form.Control>
+              <Form.Input placeholder="Company Name" />
+            </Form.Control>
+          </Form.Field>
+          <Form.Field>
+            <Form.Control>
+              <Button className="srchBtn" color="primary">Search</Button>
+            </Form.Control>
+          </Form.Field>
+        </form>
+    
+        {/* <Box>
+          <React.Fragment key=".0">
+            <Block>
+              <Notification color="info">
+            <Button className= "save" color="">
+              Save
+            </Button>
+                Some text
+              </Notification>
+            </Block>
+            <Block>
+              <Notification color="success">
+              <Button className= "save" color="">
+              Save
+            </Button>
+                Some more text
+              </Notification>
+            </Block>
+            <Block>
+              <Notification color="danger">
+              <Button className= "save" color="">
+              Save
+            </Button>
+                All of this are evently spaced
+              </Notification>
+            </Block>
+            <Block>
+              <Notification color="warning">
+              <Button className= "save" color="" >
+              Save
+            </Button>
+                This one does not generate extra margin at the bottom
+              </Notification>
+            </Block>
+          </React.Fragment>
+        </Box> */}
+      </Col>
 
-      <Box>
-  <React.Fragment key=".0">
-    <Block>
-      <Notification color="info">
-    <Button className= "save" color="">
-      Save
-    </Button>
-        Some text
-      </Notification>
-    </Block>
-    <Block>
-      <Notification color="success">
-      <Button className= "save" color="">
-      Save
-    </Button>
-        Some more text
-      </Notification>
-    </Block>
-    <Block>
-      <Notification color="danger">
-      <Button className= "save" color="">
-      Save
-    </Button>
-        All of this are evently spaced
-      </Notification>
-    </Block>
-    <Block>
-      <Notification color="warning">
-      <Button className= "save" color="" >
-      Save
-    </Button>
-        This one does not generate extra margin at the bottom
-      </Notification>
-    </Block>
-  </React.Fragment>
-</Box>
+      <Col>
+        <div className="notification is-white">
+          <h1 id="result-header" id="underline" className="title"><u>RESULTS</u></h1>
+          <div className="card">
+              <div className="card-content">
+                  {
+                    jobs.map(({MatchedObjectDescriptor:job}) => (
+                      <div><ul>
+                        <li>{job.PositionTitle}</li>
+                        <li>{job.DepartmentName}</li>
+                        <li>{job.PositionURI}</li><br></br>
+                        <button className="is-info">Save</button><hr></hr>
+                        </ul>  
+                      </div>
+                    ))
+                  }
+                  {/* <p className="title">
+                      DISPLAYED RESULTS WILL GO HERE
+                  </p> */}
+              </div>
+              <footer className="card-footer">
+                  <p className="card-footer-item">
+                      <span>
+                          View on <a href="https://www.indeed.com/">indeed.com</a>
+                      </span>
+                  </p>
+              </footer>
+          </div>
+        </div>
+      </Col>
+
+  </Row>
+
+
 
 <hr />
 

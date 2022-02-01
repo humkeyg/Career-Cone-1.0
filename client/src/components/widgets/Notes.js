@@ -12,12 +12,13 @@ import {
 import "../../App";
 
 export default function Notes() {
+  const notes= []
   return (
     <div className="Notes">
       <h2 className="section-title">Notes:</h2>
 
       <textarea
-        class="textarea is-primary"
+        className="textarea is-primary"
         placeholder="Save your notes here!"
       ></textarea>
 
