@@ -1,55 +1,60 @@
 import React from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar } from 'react-bulma-components';
 import { Link } from "react-router-dom";
 import Auth from '../utils/auth';
+import logo from '../images/logo.png';
 
 function Navigation() {
   return (
     <Navbar className="nav" expand="lg"
       style={{
-        backgroundColor: '#f8b682',
         fontWeight: 'bold',
       }}>
-      {/* <Container justify> */}
         <Navbar.Brand>
+          <Navbar.Item href='#'>
+            <img alt="Career Cone: Focus on what matters most"
+            src= { logo }
+            />
+          </Navbar.Item>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav
+            <Navbar.Container
               variant="tabs"
               defaultActiveKey="#dashboard"
               className="me-auto"
             >
-              <Nav.Link as={Link} to="/">
+              <Navbar.Item>
+              <Navbar.Link as={Link} to="/">
                 Dashboard
-              </Nav.Link>
-              <Nav.Link as={Link} to="/jobs">
+              </Navbar.Link>
+              <Navbar.Link as={Link} to="/jobs">
                 Jobs
-              </Nav.Link>
+              </Navbar.Link>
               {/* if the user is logged in show saved jobs and logout*/}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to="/saved">
+                  <Navbar.Link as={Link} to="/saved">
                     Saved Jobs
-                  </Nav.Link>
-                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                  </Navbar.Link>
+                  <Navbar.Link onClick={Auth.logout}>Logout</Navbar.Link>
                 </>
               ) : (
                 <Navbar.Collapse className="justify-content-end">
-                  <Nav.Link as={Link} to="/signup">
+                  <Navbar.Link as={Link} to="/signup">
                     Signup
-                  </Nav.Link>
-                  <Nav.Link as={Link} to="/login">
+                  </Navbar.Link>
+                  <Navbar.Link as={Link} to="/login">
                     Login
-                  </Nav.Link>
+                  </Navbar.Link>
                 </Navbar.Collapse>
               )}
-              <Nav.Link as={Link} to="/about">
+              <Navbar.Link as={Link} to="/about">
                 About
-              </Nav.Link>
-            </Nav>
+              </Navbar.Link>
+              </Navbar.Item>
+              </Navbar.Container>
           </Navbar.Collapse>
         </Navbar.Brand>
-      {/* </Container> */}
     </Navbar>
   );
 }

@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-
-import { Form, Button, Block, Card } from "react-bulma-components";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../widgets/Calendar.css";
 import Notes from "../widgets/Notes";

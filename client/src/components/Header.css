@@ -4,6 +4,14 @@
   font-family: 'Satisfy', cursive;*/
   font-family: "Twinkle Star", cursive;
   font-weight: bold;
-  padding: 5%;
   text-align: center;
+  padding-top: 4%;
+}
+
+.sub-header {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  padding-bottom: 4%;
 }
