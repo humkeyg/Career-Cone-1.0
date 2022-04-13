@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import Auth from "../../utils/auth";
 import { ADD_PROFILE } from "../../utils/mutations";
+import { Button } from "react-bulma-components";
 
 function Signup(props) {
   const [formState, setFormState] = useState({
@@ -91,7 +92,9 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <Button color="primary" type="submit">
+            Submit
+          </Button>
         </div>
       </form>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {Row, Col} from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import {
   Card,
@@ -10,7 +10,7 @@ import {
   Columns,
 } from "react-bulma-components";
 
-import './About.css';
+import "./About.css";
 
 import alison from "../../images/alison.JPG";
 import daniel from "../../images/daniel.png";
@@ -46,7 +46,9 @@ export default function About() {
                 committed work ethic seeking employment to kick start career in
                 website development and content curation.
                 <br />
-                <a href="https://github.com/afunkhouser">github.com/afunkhouser</a>
+                <a href="https://github.com/afunkhouser">
+                  github.com/afunkhouser
+                </a>
               </Content>
             </Card.Content>
           </Card>
@@ -70,7 +72,9 @@ export default function About() {
               <Content>
                 Fleet Engineer preparing to transfer into the tech industry.
                 <br />
-                <a href="https://github.com/Diaz-Daniel">github.com/Diaz-Daniel</a>
+                <a href="https://github.com/Diaz-Daniel">
+                  github.com/Diaz-Daniel
+                </a>
               </Content>
             </Card.Content>
           </Card>
@@ -96,7 +100,9 @@ export default function About() {
                 explorer the world of web development. I enjoy cooking, video
                 games, and the outdoors.
                 <br />
-                <a href="https://github.com/kcshire211">github.com/kcshire211</a>
+                <a href="https://github.com/kcshire211">
+                  github.com/kcshire211
+                </a>
               </Content>
             </Card.Content>
           </Card>
@@ -148,7 +154,9 @@ export default function About() {
               <Content>
                 I am Ryan
                 <br />
-                <a href="https://github.com/degrootr253">github.com/degrootr253</a>
+                <a href="https://github.com/degrootr253">
+                  github.com/degrootr253
+                </a>
               </Content>
             </Card.Content>
           </Card>
@@ -170,12 +178,23 @@ export default function About() {
                 </Media.Item>
               </Media>
               <Content>
+<<<<<<< HEAD
               Lateah is an aspiring machine learning engineer working on developing her software engineering 
               skills as she also juggles developing her data science skills. 
               She has worked for Lyft in there autonomous car department and is currently working
                in global product at indeed. She is generally a data nerd and her one goal is to make
                 the unknown know. She likes personal development and her personal goal in life is to never 
                 stop learning. 
+=======
+                Lateah is an aspiring machine learning engineer working on
+                developing her software engineering skills as she also juggles
+                developing her data science skills. She has worked for Lyft in
+                there autonomous car department and is currently working in
+                global product at indeed. She is generally a data nerd and her
+                one goal is to make the unknown know. She likes personal
+                development and her personal goal in life is to never stop
+                learning.
+>>>>>>> 0534179e5e0bb3bdaffb2867e1ee179cce56ab17
                 <br />
                 <a href="https://github.com/lateahmh">github.com/lateahmh</a>
               </Content>

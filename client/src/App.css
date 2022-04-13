@@ -1,30 +1,30 @@
 .App {
   text-align: center;
-  background-color: #f6a975;
+  /* background-color: #f6a975; */
 }
 
 .App-header {
-  font-family: 'Raleway';
-  font-size: 80px;;
+  font-family: "Raleway";
+  font-size: 80px;
   display: flex;
   flex-direction: column;
 }
 
 .nav {
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 .header-img {
-  background-image: url('../src/images/headerBG.jpg');
-  background-size: cover;
+  background-image: url("../src/images/vanilla-icecream.webp");
+  background-size: contain;
 }
 
 .App-footer {
   border-top: 1px solid black;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 27px;
   background-size: cover;
-  background-image: url('../src/images/footerBG.jpg');
+  /* background-image: url("../src/images/footerBG.jpg"); */
 }
 
 .footer-text {
@@ -32,12 +32,12 @@
 }
 
 .fab {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 25px;
 }
 
 /* Notes Page Styling */
 textarea {
-position: relative;
-width: 50%;
+  position: relative;
+  width: 50%;
 }

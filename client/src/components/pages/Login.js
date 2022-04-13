@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { LOGIN } from '../../utils/mutations';
-import Auth from '../../utils/auth';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
+import { LOGIN } from "../../utils/mutations";
+import Auth from "../../utils/auth";
+import { Button } from "react-bulma-components";
 
 function Login(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
@@ -61,7 +62,9 @@ function Login(props) {
           </div>
         ) : null}
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <Button color="primary" type="submit">
+            Submit
+          </Button>
         </div>
       </form>
     </div>
